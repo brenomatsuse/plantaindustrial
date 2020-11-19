@@ -1,0 +1,151 @@
+#:kivy 1.11.1
+
+<GraphPopup>:
+    title:'Escolha qual gráfico deseja acessar'
+    size_hint_y:None
+    size_hint_x:None
+    height:500
+    width:700
+    BoxLayout:
+        orientation:'vertical'
+        size_hint:(1,1)
+        Button:           
+            text:"Dados históricos da tensao"
+            font_size:12
+        Button:
+            text:"Dados históricos da frequência do motor"
+            font_size:12
+        Button:          
+            text:"Dados históricos da temperatura do estator"
+            font_size:12
+        Button:
+            text:"Dados históricos da rotaçao do motor"
+            font_size:12
+        Button:
+            text:"Dados históricos da potência de entrada"
+            font_size:12
+        Button:
+            text:"Dados históricos da corrente"
+            font_size:12
+        Button:
+            text:"Dados históricos da vazao de entrada"
+            font_size:12
+        Button:
+            text:"Dados históricos do nivel do reservatorio"
+            font_size:12
+        Button:
+            font_size:12
+            text:"Fechar"
+            on_release:
+                root.dismiss()
+
+    
+<HistGraphPopup>:
+    title:'Escolha qual gráfico deseja acessar'
+    size_hint_y:None
+    size_hint_x:None
+    height:500
+    width:700
+    BoxLayout:
+        orientation:'vertical'
+        size_hint:(1,1)
+        Button:           
+            text:"Dados históricos da tensao"
+            font_size:12
+        Button:
+            text:"Dados históricos da frequência do motor"
+            font_size:12
+        Button:          
+            text:"Dados históricos da temperatura do estator"
+            font_size:12
+        Button:
+            text:"Dados históricos da rotaçao do motor"
+            font_size:12
+        Button:
+            text:"Dados históricos da potência de entrada"
+            font_size:12
+        Button:
+            text:"Dados históricos da corrente"
+            font_size:12
+        Button:
+            text:"Dados históricos da vazao de entrada"
+            font_size:12
+        Button:
+            text:"Dados históricos do nivel do reservatorio"
+            font_size:12
+        Button:
+            font_size:12
+            text:"Fechar"
+            on_release:
+                root.dismiss()
+
+    
+<MotorPopup>:
+    title:'Escolha a operação que deseja realizar no motor'
+    size_hint_y:None
+    size_hint_x:None
+    height:500
+    width:700
+    BoxLayout:
+        orientation:'vertical'
+        size_hint:(1,1)
+        Button:
+            text:"Ligar motor"
+            font_size:12
+        Button:
+            text:"Alterar frequência do motor"
+            font_size:12
+            on_release:root._freqPopup.open()
+        Button:
+            text:"Habilitar partida automática do motor"
+            font_size:12
+        Button:
+            text:"Desligar motor"
+            font_size:12
+        Button:
+            font_size:12
+            text:"Fechar"
+            on_release:
+                root.dismiss()
+
+
+<SolenoidePopup>:
+    title:"Ligação do solenoide"
+    size_hint_y:None
+    size_hint_x:0.4
+    height:150
+    BoxLayout:
+        orientation:'horizontal'
+        Button:
+            size_hint_y:None
+            height:80
+            text:"Ligar"
+        Button:
+            size_hint_y:None
+            height:80
+            text:"Desligar"
+        Button:
+            size_hint_y:None
+            height:80
+            text:"Fechar"
+            on_release:
+                root.dismiss()
+<FreqPopup>:
+    title:"Altere a frequência do motor"
+    size_hint_y:None
+    size_hint_x:0.4
+    height:150
+    BoxLayout:
+        id:layout
+        orientation:'vertical'
+        GridLayout: 
+            cols:2
+            rows:1
+            Label:
+                text:"Frequência [Hz]"
+                font_size:14
+            TextInput:
+                id:txt_st
+                font_size:14
+                haling:'center'
+                valing:'middle'
